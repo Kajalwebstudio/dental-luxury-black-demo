@@ -5,146 +5,127 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Luxury Dental</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif;}
+body{background:#0a0a0a;color:#fff;scroll-behavior:smooth;}
 
-body{
-  background:#000;
-  color:white;
+header{
+display:flex;justify-content:space-between;padding:20px 50px;
+background:#000;position:sticky;top:0;z-index:1000;
 }
+header h2{color:gold;}
+nav a{color:#fff;margin-left:20px;text-decoration:none;}
 
-/* HERO */
 .hero{
-  height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
+height:100vh;
+display:flex;align-items:center;justify-content:center;
+text-align:center;
+background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.9)),
+url('https://images.unsplash.com/photo-1588776814546-ec7e4c53f6d6') center/cover;
 }
-
 .hero h1{
-  font-size:60px;
-  background:linear-gradient(45deg,gold,#fff);
-  -webkit-background-clip:text;
-  color:transparent;
+font-size:60px;
+background:linear-gradient(to right,gold,#fff);
+-webkit-background-clip:text;color:transparent;
 }
-
-.hero p{
-  margin-top:20px;
-  color:#aaa;
-}
-
+.hero p{margin:20px 0;}
 .btn{
-  margin-top:30px;
-  padding:15px 40px;
-  background:gold;
-  color:black;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:bold;
+padding:15px 30px;
+background:gold;color:black;
+border-radius:30px;text-decoration:none;font-weight:600;
 }
 
-/* SECTION */
-.section{
-  padding:100px 10%;
-  text-align:center;
-}
+section{padding:80px 50px;text-align:center;}
 
-/* SERVICES */
-.cards{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
+.services{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;
 }
-
 .card{
-  background:rgba(255,255,255,0.05);
-  margin:15px;
-  padding:30px;
-  border-radius:20px;
-  width:260px;
-  border:1px solid rgba(255,255,255,0.1);
-  transition:0.3s;
+background:#111;padding:30px;border-radius:10px;
+transition:0.3s;
+}
+.card:hover{transform:translateY(-10px);}
+
+.before-after img{
+width:300px;border-radius:10px;margin:10px;
 }
 
-.card:hover{
-  transform:translateY(-10px);
-  box-shadow:0 0 20px rgba(255,215,0,0.2);
-}
-
-/* IMAGE SECTION */
-.image-sec img{
-  width:100%;
-  border-radius:20px;
-}
-
-/* TESTIMONIAL */
 .testimonial{
-  margin-top:40px;
-  padding:40px;
-  background:#111;
-  border-radius:20px;
+background:#111;padding:30px;margin:20px;border-radius:10px;
 }
 
-/* FOOTER */
-footer{
-  padding:40px;
-  text-align:center;
-  color:#aaa;
+.cta{
+background:linear-gradient(to right,#111,#222);
+padding:60px;
 }
 
-/* WHATSAPP */
 .whatsapp{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  padding:15px;
-  border-radius:50%;
-  text-decoration:none;
+position:fixed;bottom:20px;right:20px;
+background:#25D366;color:white;padding:15px 20px;
+border-radius:50px;text-decoration:none;
 }
 
+footer{
+background:#000;padding:20px;text-align:center;
+}
 </style>
 </head>
 
 <body>
 
+<header>
+<h2>EliteSmile</h2>
+<nav>
+<a href="#services">Services</a>
+<a href="#results">Results</a>
+<a href="#testimonials">Reviews</a>
+</nav>
+</header>
+
 <section class="hero">
-  <h1>Luxury Smile Experience</h1>
-  <p>Exclusive dental care for premium clients</p>
-  <a href="#" class="btn">Book VIP Consultation</a>
+<div>
+<h1>Luxury Smile Experience</h1>
+<p>Premium dental care for confident smiles</p>
+<a href="#" class="btn">Book VIP Consultation</a>
+</div>
 </section>
 
-<section class="section">
-  <h2>Our Premium Services</h2>
-  <div class="cards">
-    <div class="card">Smile Design</div>
-    <div class="card">Dental Implants</div>
-    <div class="card">Cosmetic Dentistry</div>
-  </div>
+<section id="services">
+<h2>Our Premium Services</h2>
+<div class="services">
+<div class="card">Teeth Whitening</div>
+<div class="card">Dental Implants</div>
+<div class="card">Smile Makeover</div>
+<div class="card">Braces & Aligners</div>
+</div>
 </section>
 
-<section class="section image-sec">
-  <h2>World-Class Technology</h2>
-  <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5">
+<section id="results">
+<h2>Real Transformations</h2>
+<div class="before-after">
+<img src="https://images.unsplash.com/photo-1606813909024-74a3b7c6d5f2">
+<img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe">
+</div>
 </section>
 
-<section class="section">
-  <h2>Client Experience</h2>
-  <div class="testimonial">
-    <p>"Absolutely premium service. Felt like a luxury experience from start to finish."</p>
-    <h4>- Elite Client</h4>
-  </div>
+<section id="testimonials">
+<h2>What Patients Say</h2>
+<div class="testimonial">“Amazing experience! My smile changed completely.”</div>
+<div class="testimonial">“Highly professional and painless treatment.”</div>
 </section>
+
+<section class="cta">
+<h2>Ready for Your Perfect Smile?</h2>
+<a href="#" class="btn">Book Appointment Now</a>
+</section>
+
+<a class="whatsapp" href="#">Chat</a>
 
 <footer>
-  © 2026 Luxury Dental Clinic
+<p>© 2026 EliteSmile Clinic</p>
 </footer>
-
-<a href="#" class="whatsapp">💬</a>
 
 </body>
 </html>
